@@ -3,7 +3,7 @@
 A minimalistic todo manager for kakoune
 
 ### Keys
-#### Normal mode
+#### kak-todo mode
 ```
 <ret>  =  toggle todo state, e.g. mark or unmark
 a      =  add new todo bellow current line
@@ -31,3 +31,5 @@ D      =  delete current todo
 | todo_dir | str | ~/.todo |
 | todo_mark | str | '✓' |
 
+#### tip
+- `map buffer user t %{: enter-user-mode kak-todo<ret>}`
