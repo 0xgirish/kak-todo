@@ -2,7 +2,7 @@
 
 A minimalistic todo manager for kakoune
 
-### Commands
+### Keys
 #### Normal mode
 ```
 <ret>  =  toggle todo state, e.g. mark or unmark
@@ -19,14 +19,15 @@ D      =  delete current todo
 <      = outdent current todo
 ```
 
+### Plugin commands
+-  `todo-open-default-project` : opens default.%opt{todo_filetype} in todo_dir
+-  `toggle-todo` : toggle current todo state, e.g. mark or unmark
+
+
 ### Options
 | option | type | default |
 |--------|------|---------|
 | todo_filetype | str | todo |
 | todo_dir | str | ~/.todo |
 | todo_mark | str | '✓' |
-
-### Plugin commands
--  `todo-open-default-project` : opens default.%opt{todo_filetype} in todo_dir
--  `toggle-todo` : toggle current todo state, e.g. mark or unmark
 
