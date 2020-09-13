@@ -10,6 +10,8 @@ define-command todo-open-default-project %{
     edit "%opt{todo_dir}/default.%opt{todo_filetype}"
 } -docstring "open default todo project"
 
+provide-module kak_todo %§
+
 hook global BufCreate ".*.%opt{todo_filetype}" %{
     map buffer insert <ret> "<a-;>\o- [ ] <esc>"
     map buffer insert > "<a-;>>"
@@ -20,6 +22,8 @@ hook global BufCreate ".*.%opt{todo_filetype}" %{
     map buffer kak-todo D xd -docstring "delete todo"
     map buffer kak-todo a "i<a-;>\o- [ ] <esc>" -docstring "add todo bellow current line"
     map buffer kak-todo A "gei<a-;>\o- [ ] <esc>" -docstring "add todo at the end of buffer"
+    map buffer kak-todo b "i<a-;>\O- [ ] <esc>" -docstring "add todo before current line"
+    map buffer kak-todo B "gki<a-;>\O- [ ] <esc>" -docstring "add todo at the start of buffer"
     map buffer kak-todo o "i<a-;>\o- [ ] <esc><a-;>>" -docstring "nested todo under todo"
 
     # write todo file on changing mode
@@ -37,3 +41,5 @@ define-command toggle-todo %{
         execute-keys -draft "ghf[lr "
     }
 } -docstring 'toogle todo as marked and unmarked'
+
+§

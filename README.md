@@ -2,6 +2,12 @@
 
 A minimalistic todo manager for kakoune
 
+### Uses
+add following line after setting your options
+```
+require-module kak_todo
+```
+
 ### Keys
 #### kak-todo mode
 ```
