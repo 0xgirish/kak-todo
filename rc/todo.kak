@@ -20,7 +20,7 @@ hook global BufCreate ".*.%opt{todo_filetype}" %{
     map buffer normal A "ge\o- [ ] <esc>i" -docstring "add todo at the end of buffer"
     map buffer normal o "\o- [ ] <esc>>i" -docstring "nested todo under todo"
 
-	# write todo file on changing mode
+    # write todo file on changing mode
     hook buffer ModeChange ".*:normal" %{
         evaluate-commands w
     }
@@ -36,4 +36,4 @@ define-command toggle-todo %{
         execute-keys "ghf[lr ;"
     }
     execute-keys '"zz'
-} -docstring 'toogle todo as marker and unmarked'
+} -docstring 'toogle todo as marked and unmarked'
