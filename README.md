@@ -25,3 +25,8 @@ D      =  delete current todo
 | todo_filetype | str | todo |
 | todo_dir | str | ~/.todo |
 | todo_mark | str | '✓' |
+
+### Plugin commands
+-  `todo-open-default-project` : opens default.%opt{todo_filetype} in todo_dir
+-  `toggle-todo` : toggle current todo state, e.g. mark or unmark
+
